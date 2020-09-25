@@ -1,0 +1,52 @@
+<div class="title">
+  <ul class="list-inline route-back">
+    <li class="list-inline-item basket" title="Главная">
+      <a href="/">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        Главная
+      </a>
+    </li>
+    <li class="list-inline-item basket" title="Мягкая Мебель">
+      <a href="/soft-furniture">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        Мягкая Мебель
+      </a>
+    </li>
+    <li class="list-inline-item basket" title="Диваны">
+      <a href="/sofas">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        Диваны
+      </a>
+    </li>
+  </ul>
+  <h2>{{this.model.name}}</h2>
+</div>
+<div class="gallery">
+  <div class="display">
+    <img data-cs="displayed-img" src="/assets/images/info1.jpg">
+  </div>
+  {{#each this.model.images as |image|}}
+    <div class="image selected">
+      <img src={{image.src}} {{action "select" image.src}}>
+    </div>
+  {{/each}}
+</div>
+<div class="description">
+  <p class="hd">Описание</p>
+  <span>
+    {{#each this.model.description as |paragraph|}}
+      <p> {{paragraph.text}}</p>
+    {{/each}}
+  </span>
+</div>
+<div class="spec">
+  <p class="hd">Характеристики</p>
+  <table>
+    {{#each this.model.specs as |spec|}}
+      <tr>
+        <td>{{spec.name}}</td>
+        <td>{{spec.value}}</td>
+      </tr>
+    {{/each}}
+  </table>
+</div>

@@ -25,16 +25,34 @@
     <ul class="option">
       <li><input type="checkbox"> Да <span class="badge badge-secondary">3</span></li>
     </ul>
+    <span class="topic">Производитель</span>
+    <ul class="option">
+      <li><input type="checkbox"> AMF <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> AVF <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> Davidos <span class="badge badge-secondary">2</span></li>
+      <li><input type="checkbox"> Diamond <span class="badge badge-secondary">3</span></li>
+      <li><input type="checkbox"> Lefort <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> Амоти <span class="badge badge-secondary">3</span></li>
+      <li><input type="checkbox"> Аскольд <span class="badge badge-secondary">2</span></li>
+      <li><input type="checkbox"> Веста <span class="badge badge-secondary">4</span></li>
+      <li><input type="checkbox"> Верзин <span class="badge badge-secondary">7</span></li>
+    </ul>
+    <span class="topic">Размер спального места, см.</span>
+    <ul class="option">
+      <li><input type="checkbox"> 116х190 <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> 119х190 <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> 147х197 <span class="badge badge-secondary">2</span></li>
+      <li><input type="checkbox"> 150х209 <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> 164х200 <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> 120х190 <span class="badge badge-secondary">2</span></li>
+      <li><input type="checkbox"> 138х200 <span class="badge badge-secondary">2</span></li>
+      <li><input type="checkbox"> 145х200 <span class="badge badge-secondary">1</span></li>
+      <li><input type="checkbox"> 147х200 <span class="badge badge-secondary">1</span></li>
+    </ul>
   </div>
 </div>
 <div class="catalog step2">
-  {{#each @items as |item|}}
-    {{debugger}}
-    <Item @name={{item.name}} @imgPath={{item.imgPath}}/>
-  {{/each}}
-
-  {{#each @sofas as |item|}}
-    {{debugger}}
-    <Item @name={{item.name}} @imgPath={{item.imgPath}}/>
+  {{#each this.model.items as |item|}}
+    <Item @name={{item.name}} @imgPath={{item.imgPath}} @link="/sofas/{{item.id}}"/>
   {{/each}}
 </div>
