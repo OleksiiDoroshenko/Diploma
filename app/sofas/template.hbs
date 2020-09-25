@@ -1,0 +1,40 @@
+<div class="title">
+  <ul class="list-inline route-back">
+    <li class="list-inline-item basket" title="Главная">
+      <a href="/">
+        <i class="fa fa-home" aria-hidden="true"></i>
+        Главная
+      </a>
+    </li>
+    <li class="list-inline-item basket" title="Мягкая Мебель">
+      <a href="/soft-furniture">
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        Мягкая Мебель
+      </a>
+    </li>
+    <li class="list-inline-item basket" title="Диваны">
+      <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      Диваны
+    </li>
+  </ul>
+  <h2>Диваны</h2>
+</div>
+<div class="sidebar">
+  <div>
+    <span class="topic">Сьемный чехол</span>
+    <ul class="option">
+      <li><input type="checkbox"> Да <span class="badge badge-secondary">3</span></li>
+    </ul>
+  </div>
+</div>
+<div class="catalog step2">
+  {{#each @items as |item|}}
+    {{debugger}}
+    <Item @name={{item.name}} @imgPath={{item.imgPath}}/>
+  {{/each}}
+
+  {{#each @sofas as |item|}}
+    {{debugger}}
+    <Item @name={{item.name}} @imgPath={{item.imgPath}}/>
+  {{/each}}
+</div>
