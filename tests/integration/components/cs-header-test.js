@@ -12,15 +12,37 @@ module('Integration | Component | cs-header', function(hooks) {
 
     await render(hbs`<CsHeader />`);
 
-    assert.equal(this.element.textContent.trim(), '');
-
-    // Template block usage:
-    await render(hbs`
-      <CsHeader>
-        template block text
-      </CsHeader>
-    `);
-
-    assert.equal(this.element.textContent.trim(), 'template block text');
+    assert.equal(this.element.textContent.trim(), '+38 (095) 888-888-88\n' +
+      '        |\n' +
+      '        +38 (067) 777-777-77\n' +
+      '      \n' +
+      '      Звоните нам ежедневно с 10:00 до 21:00 или напишите нам\n' +
+      '    \n' +
+      '    \n' +
+      '      \n' +
+      '        \n' +
+      '        \n' +
+      '          Поиск\n' +
+      '        \n' +
+      '      \n' +
+      '    \n' +
+      '  \n' +
+      '  \n' +
+      '  \n' +
+      '    \n' +
+      '      \n' +
+      '        Товары\n' +
+      '      \n' +
+      '      \n' +
+      '        Оплата\n' +
+      '      \n' +
+      '      \n' +
+      '        Доставка\n' +
+      '      \n' +
+      '      \n' +
+      '        Корзина\n' +
+      '      \n' +
+      '      \n' +
+      '        Вход');
   });
 });
